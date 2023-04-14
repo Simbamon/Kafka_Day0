@@ -55,4 +55,13 @@ the default value is `replica`, which writes enough data to wal archiving and re
 3. After change the config, go to Services and restart the `postgresql-x64-15` service
 4. rerun the sql query to see the difference in wal_level setting
 5. Make a user under postgres account with admin access
-
+6. Setup the docker compose yaml file (Check docker=compose.yml)
+7. Run this command:
+   ```bash
+   docker compose up -d
+   ```
+8. Cluster set up in Kafka
+    - In Kafka Manager (Port 9000 in the docker compose setting), add the cluster
+    - In cluster name, make sure to come up with a name without space or special characters
+    - Provide zookeeper host (zookeeper:2181 in the docker compose setting)
+    - Check both JMX Polling, Poll consumer information, and Active OffsetCache (This setting is for small consumers)
