@@ -65,3 +65,4 @@ the default value is `replica`, which writes enough data to wal archiving and re
     - In cluster name, make sure to come up with a name without space or special characters
     - Provide zookeeper host (zookeeper:2181 in the docker compose setting)
     - Check both JMX Polling, Poll consumer information, and Active OffsetCache (This setting is for small consumers)
+9. Create Topic in Kafka
